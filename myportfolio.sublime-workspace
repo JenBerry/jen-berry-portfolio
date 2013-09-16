@@ -1,0 +1,1196 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tran",
+				"transition	CSS - transition: ;"
+			],
+			[
+				"back",
+				"background-shorthand	background-shorthand"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"table-c",
+				"table-cell"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"projectB",
+				"projectBrief"
+			],
+			[
+				"pro",
+				"projects"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"backG",
+				"background-image"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"proj",
+				"project-details"
+			],
+			[
+				"sk",
+				"skills-description"
+			],
+			[
+				"tit",
+				"titlePosition"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"anima",
+				"animate"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"sli",
+				"slideUp"
+			],
+			[
+				"acti",
+				"activeProject"
+			],
+			[
+				"n",
+				"nth-child"
+			],
+			[
+				"det",
+				"details-close-arrow"
+			],
+			[
+				"de",
+				"details-close-arrow"
+			],
+			[
+				"p",
+				"projects"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"cont",
+				"contact-box"
+			],
+			[
+				"height",
+				"heightOfSection"
+			],
+			[
+				"pos",
+				"positionOfSection"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"bor",
+				"border-style"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"con",
+				"contact-box"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"resize",
+				"resizeSections"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"utf-8\">\n	<title>Jen Berry, Web Developer</title>\n	<meta name=\"description\" content=\"Jen Berry's web development portfolio, skilled in JavaScript, HTML5, CSS3 and more\">\n	<!-- <meta name=\"viewport\" content=\"width=320px\" /> -->\n\n 	<link rel=\"stylesheet\" href=\"style.css\" /> \n	<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script>\n	<script src=\"scripts.js\"></script>\n\n	<!--[if lt IE 9]>\n  		<script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n  	<![endif]-->\n</head>\n\n<body>\n	<header id=\"page-header\">\n		<h1 id=\"logo\">Jen Berry\n			<a href=\"http://www.linkedin.com/pub/jennifer-berry/1b/240/233\" target=\"_blank\">\n				<img class=\"social-media\" src=\"img/LinkedIn_Logo30px.png\" alt=\"Linked In\" title=\"Link to Jen Berry's LinkeIn\" />\n		 	</a>\n	 		<a href=\"https://twitter.com/jennnen\" target=\"_blank\">\n				<img class=\"social-media\" src=\"img/twitter-bird-light-bgs.png\" alt=\"Twitter\" title=\"Link to Jen Berry's Twitter\"/>\n	 		</a>\n		</h1>\n		<nav id=\"page-nav\"><ul>\n			<li><a class=\"scroll\" href=\"#home\">Home</a></li>\n			<li><a class=\"scroll\" href=\"#skills\">Skills</a></li>\n			<li><a class=\"scroll\" href=\"#projects\">Projects</a></li>\n			<li><a class=\"scroll\" href=\"#blog\">Blog</a></li>\n			<li><a class=\"scroll\" href=\"#about-me\">About Me</a></li>\n			<li><a class=\"scroll\" href=\"#contact\">Contact</a></li>\n		</ul></nav>\n	</header>\n\n	<section id=\"home\">\n		<a name=\"home\"></a>\n		<header id=\"home-title\">\n			<h2>\n				<img id=\"title-i-am\" src=\"img/title-i-am.png\" alt=\"I am a\" />\n				<img id=\"title-web-developer\" src=\"img/title-web-developer.png\" alt=\"Web Developer\" title=\"Web Developer title image\" />\n				<img id=\"title-obsessed\" src=\"img/title-obsessed.png\" alt=\"obsessed with clean, elegant code\" />\n			</h2>\n		<div id=\"find-out-more-button\">\n			<a class=\"scroll\" href=\"#skills\"><p>\n				Find out More\n			</p></a>\n		</div>\n		</header>\n\n\n		<aside class=\"testimonials\"><figure>\n			<blockquote>“Jen beat the Rocksoc Django website into shape, making it look great while fixing the Pythons in the back-end. She made amazing use of git and other Unix tools.”</blockquote>\n			<figcaption>- Rocksoc</figcaption>\n		</figure></aside>\n		\n	</section>\n\n	<section id=\"skills\">\n		<a name=\"skills\"></a>\n		<h2 id=\"introduction\">I make websites! Want one?</h2>\n		<div id=\"skills-container\">\n\n			<svg id=\"myCanvas\" width=\"600\" height=\"600\">\n				<circle id=\"centercircle\" cx=\"300\" cy=\"300\" r=\"120\" fill=\"#fc5703\" stroke=\"#d5d5d5\" stroke-width=\"20\">\n				</circle>\n				<text x=\"300\" y=\"300\" fill=\"#313131\" style=\"dominant-baseline: central; text-anchor:middle; font-size:24px; pointer-events:none;\">\n					Primary Skills\n				</text>\n\n\n				<circle id=\"skill1\" cx=\"300\" cy=\"90\" r=\"40\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"10\">\n					<animateMotion path=\"M 0 210 L 0 0\" dur=\"1s\" begin=\"centercircle.click\" />\n				</circle>\n				<text x=\"300\" y=\"90\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle; pointer-events:none;\">\n					HTML5\n				</text>\n\n				<circle id=\"skill2\" cx=\"495\" cy=\"200\" r=\"40\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"10\">\n					<animateMotion path=\"M -195 100 L 0 0\" dur=\"1s\" begin=\"centercircle.click\" />\n				</circle>\n				<text x=\"495\" y=\"200\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle; pointer-events:none;\">\n					Django\n				</text>\n\n				<circle id=\"skill3\" cx=\"495\" cy=\"400\" r=\"40\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"10\">\n					<animateMotion path=\"M -195 -100 L 0 0\" dur=\"1s\" begin=\"centercircle.click\" />\n				</circle>\n				<text x=\"495\" y=\"400\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle; pointer-events:none;\">\n					MySQL\n				</text>\n\n				<circle id=\"skill4\" cx=\"300\" cy=\"510\" r=\"40\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"10\">\n					<animateMotion path=\"M 0 -210 L 0 0\" dur=\"1s\" begin=\"centercircle.click\" />\n				</circle>\n				<text x=\"300\" y=\"510\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle; pointer-events:none;\">\n					Qt Quick\n				</text>\n\n				<circle id=\"skill5\" cx=\"105\" cy=\"400\" r=\"40\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"10\">\n					<animateMotion path=\"M 195 -100 L 0 0\" dur=\"1s\" begin=\"centercircle.click\" />\n				</circle>\n				<text x=\"105\" y=\"400\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle; pointer-events:none;\">\n					CSS3\n				</text>\n\n				<circle id=\"skill6\" cx=\"105\" cy=\"200\" r=\"40\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"10\">\n					<animateMotion path=\"M 195 100 L 0 0\" dur=\"1s\" begin=\"centercircle.click\" />\n				</circle>\n				<text fill=\"#d5d5d5\" style=\"pointer-events:none;\">\n					<tspan x=\"105\" y=\"193\" style=\"dominant-baseline: central; text-anchor:middle;\">Java</tspan>\n					<tspan x=\"105\" y=\"207\" style=\"dominant-baseline: central; text-anchor:middle;\" >Script</tspan>\n				</text>\n				\n			</svg>\n\n			<aside class=\"skills-description\" id=\"top-left\">\n				<p id=\"skill1-desc\">\n					<mark>HTML</mark> (Hyper Text Markip Language) is the language that defines the structure and layout of a web page. <mark>HTML5</mark> is the upcoming new standard, replacing HTML4 and XHTML, and most of the features are already supported by modern browsers. It does cool things like support svg (click on the middle circle for an example of what that can do)\n				</p>\n				<p id=\"skill6-desc\">\n					<mark>JavaScript</mark> is a scripting language used to make web pages interactive. It runs on the visitor's computer and doesn't require constant downloads from the website. It is also the scripting language for the Qt UI framework, and many other applications. <mark>JQuery</mark> is a JavaScript library that makes it easy to interact with a web page.\n				</p>\n			</aside>\n			<aside class=\"skills-description\" id=\"top-right\">		\n				<p id=\"skill2-desc\">\n					<mark>Django</mark> is a high-level <mark>Python</mark> Web framework. It manages the databases, and allows users to update the content easily, while giving the developer complete control over how the content is manipulated and displayed.\n				</p>\n			</aside>\n			<aside class=\"skills-description\" id=\"bottom-left\">\n				<p id=\"skill5-desc\">\n					<mark>CSS</mark> (Cascading Style Sheets) is the language for defining the appearance of a web page. <mark>CSS3</mark> is the new standard, and includes fun new effects such as shadows, rounded corners, transformations and animations\n				</p>\n				<p id=\"skill4-desc\">\n					<mark>Qt</mark> is an open-source cross-platform application framework built on C++. The front-end development (<mark>Qt Quick</mark>) uses a language called <mark>QML</mark> (Qt Markup Language) that is conceptually similar to a combination of HTML and CSS, and makes use of JavaScript. It allows for rapid prototyping and creation of functional interactive user interfaces that can be deployed accross most platfroms.\n				</p>\n			</aside>\n			<aside class=\"skills-description\" id=\"bottom-right\">\n				<p id=\"skill3-desc\">\n					<mark>MySQL</mark> (Structured Query Language) is an open source relational database management system that runs as a server, providing multi-user access to a number of databases. It is a popular database system for web pages.\n				</p>\n			</aside>\n		</div>\n	</section>\n\n	<section id=\"projects\">\n		<a name=\"projects\"></a>\n		<h3>Projects</h3>\n		<ul>\n			<li>\n				<article>\n					<div class=\"project-brief\">\n						<h4>Personal Web Development Portfolio</h4>\n						<p class=\"project-description\">\n							  The website you see here! I took a <a href=\"http://themeforest.net/item/we-design-one-page-portfolio/3155176\">photoshop template</a>, adapted it for my purpose, and created a fully functioning, interactive, professional online portfolio with HTML5 CSS3 JavaScript and JQuery\n						</p>\n\n						<svg class=\"project-skills\" width=\"320\" height=\"80\">\n							<circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"40\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								HTML5\n							</text>\n							<circle cx=\"120\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"120\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								CSS3\n							</text>\n							<circle cx=\"200\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"200\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								<tspan x=\"200\" y=\"33\" style=\"dominant-baseline: central; text-anchor:middle;\">Java</tspan>\n								<tspan x=\"200\" y=\"47\" style=\"dominant-baseline: central; text-anchor:middle;\" >Script</tspan>\n							</text>\n							<circle cx=\"280\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"280\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								jQuery\n							</text>\n						</svg>\n\n					</div>\n					<div class=\"project-details\">\n								<p><mark>You are looking at it!</mark></p>\n\n						</div>\n					\n				</article>\n			</li>\n\n\n			<li>\n				<article>\n					<div class=\"project-brief\">\n						<h4>Native touchscreen UI for Domino Printing Sciences</h4>\n						<p class=\"project-description\">\n							 This is a UI for production-line coding&amp;marking printers running on low-spec hardware. The UI had to be intuitive and common across several different printer technologies and two different screen sizes. It was developed using Qt, a C++ cross-platform application framework, and I was using its front end language: QML, with JavaScript to create the UI.\n						</p>\n\n						<svg class=\"project-skills\" width=\"160\" height=\"80\">\n							<circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"40\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								Qt Quick\n							</text>\n							<circle cx=\"120\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text fill=\"#d5d5d5\">\n								<tspan x=\"120\" y=\"33\" style=\"dominant-baseline: central; text-anchor:middle;\">Java</tspan>\n								<tspan x=\"120\" y=\"47\" style=\"dominant-baseline: central; text-anchor:middle;\" >Script</tspan>\n							</text>\n						</svg>\n		\n						<div class=\"details-button\">\n							<a href=\"#projects\" class=\"do-nothing\">\n								<p>View Project</p>\n							</a>\n						</div>\n						<div class=\"details-arrow\">\n						</div>\n					</div>\n					<div class=\"project-details\">\n						<video id=\"quickstep-video\" width=\"910\" height=\"590\" controls>\n\n							  <source src=\"video/quickstep-demo.ogg\" type=\"video/ogg\">\n							  <source src=\"video/quickstep-demo.webm\" type=\"video/webm\">\n							  <source src=\"video/quickstep-demo.mp4\" type=\"video/mp4\">\n							  <object data=\"video/quickstep-demo.ogg\" width=\"910\" height=\"590\">\n							   <embed src=\"video/quickstep-demo.swf\" width=\"910\" height=\"590\">\n							  </object> \n\n						</video>\n\n						<div class=\"details-close\">\n							<p>X</p>\n						</div>\n						<div class=\"details-close-arrow\">\n						</div>\n					</div>\n				</article>\n			</li>\n			<li>\n				<article>\n					<div class=\"project-brief\">\n						<h4>Web development for the Cambridge University Rock Society</h4>\n						<p class=\"project-description\">\n							  I developed the back-end from an old developmental version of Django and an outdated version of MySQL to the current releases. This also required working with python, dealing with a headache of Unicode problems, using SSH and git version control.\n						</p><p class=\"project-description\">\n							  I also developed a new front-end with XHTML and CSS, designed to be responsive to the width of the window down to a minimum size. It was also tested across different browsers and operating systems. I used W3C's code validator to check my code against the standards.\n						</p>\n\n						<svg class=\"project-skills\" width=\"320\" height=\"80\">\n							<circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text fill=\"#d5d5d5\">\n								<tspan x=\"40\" y=\"34\" style=\"dominant-baseline: central; text-anchor:middle;\">XHTML</tspan>\n								<tspan x=\"40\" y=\"48\" style=\"dominant-baseline: central; text-anchor:middle;\" >CSS</tspan>\n							</text>\n							<circle cx=\"120\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text fill=\"#d5d5d5\">\n								<tspan x=\"120\" y=\"34\" style=\"dominant-baseline: central; text-anchor:middle;\">Django</tspan>\n								<tspan x=\"120\" y=\"48\" style=\"dominant-baseline: central; text-anchor:middle;\" >Python</tspan>\n							</text>\n							<circle cx=\"200\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text fill=\"#d5d5d5\" >\n								<tspan x=\"200\" y=\"34\" style=\"dominant-baseline: central; text-anchor:middle;\">Git</tspan>\n								<tspan x=\"200\" y=\"48\" style=\"dominant-baseline: central; text-anchor:middle;\" >SSH</tspan>\n							</text>\n							<circle cx=\"280\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"280\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								MySQL\n							</text>\n						</svg>\n					\n						<div class=\"details-button\">\n							<a href=\"#projects\" class=\"do-nothing\">\n								<p>View Project</p>\n							</a>\n						</div>\n						<div class=\"details-arrow\">\n						</div>\n						<div class=\"live-link\">\n							<a href=\"http://www.rocksoc.org.uk\" target=\"_blank\">\n								<p>\n									View live website\n								</p>\n							</a>\n						</div>\n					</div>\n					<div class=\"project-details\">\n						<img src=\"img/rocksoc-website.png\" alt=\"Rocksoc website screenshot\" title=\"Screenshot of www.rocksoc.org.uk, Web Development by Jen Berry\">\n						<div class=\"details-close\">\n							<p>X</p>\n						</div>\n						<div class=\"details-close-arrow\">\n						</div>\n					</div>\n				</article>\n			</li>\n			<li>\n				<article>\n					<div class=\"project-brief\">\n						<h4>Website to display my artwork</h4>\n						<p class=\"project-description\">\n							  Designed and built from scratch. The website consists of 4 pages: home, category, gallery, &amp; picture, and the content of those pages is retrieved from a MySQL database using PHP depending on the links the user clicks.\n						</p>\n\n						<svg class=\"project-skills\" width=\"320\" height=\"80\">\n							<circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text fill=\"#d5d5d5\" >\n								<tspan x=\"40\" y=\"34\" style=\"dominant-baseline: central; text-anchor:middle;\">XHTML</tspan>\n								<tspan x=\"40\" y=\"48\" style=\"dominant-baseline: central; text-anchor:middle;\" >CSS</tspan>\n							</text>\n							<circle cx=\"120\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"120\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								PHP\n							</text>\n							<circle cx=\"200\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"200\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								MySQL\n							</text>\n	\n						</svg>\n						\n						<div class=\"details-button\">\n							<a href=\"#projects\" class=\"do-nothing\">\n								<p>View Project</p>\n							</a>\n						</div>\n						<div class=\"details-arrow\">\n						</div>\n						<div class=\"live-link\">\n							<a href=\"http://www.jenberry.co.uk\" target=\"_blank\">\n								<p>\n									View live website\n								</p>\n							</a>\n						</div>\n					</div>\n					<div class=\"project-details\">\n						<img src=\"img/jenberry-website.png\" alt=\"Jen Berry website screenshot\" title=\"Screenshot of www.jenberry.co.uk, Web Development by Jen Berry\">\n						<div class=\"details-close\">\n							<p>X</p>\n						</div>\n						<div class=\"details-close-arrow\">\n						</div>\n					</div>\n				</article>\n			</li>\n			<li>\n				<article>\n					<div class=\"project-brief\">\n						<h4>Website for Orchard Park Community Council</h4>\n						<p class=\"project-description\">\n							  I built a website for the council using the Joomla CMS and customising a theme with CSS.\n						</p>\n\n						<svg class=\"project-skills\" width=\"160\" height=\"80\">\n							<circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"40\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								Joomla!\n							</text>\n							<circle cx=\"120\" cy=\"40\" r=\"35\" fill=\"#313131\" stroke=\"#d5d5d5\" stroke-width=\"5\">\n							</circle>\n							<text x=\"120\" y=\"40\" fill=\"#d5d5d5\" style=\"dominant-baseline: central; text-anchor:middle;\">\n								CSS\n							</text>\n							\n						</svg>\n						\n						<div class=\"details-button\">\n							<a href=\"#projects\" class=\"do-nothing\">\n								<p>View Project</p>\n							</a>\n						</div>\n						<div class=\"details-arrow\">\n						</div>\n					</div>\n					<div class=\"project-details\">\n						<img src=\"img/orchard-park-website.png\" alt=\"Orchard Park website screenshot\" title=\"Screenshot of www.orchardpark.gov.uk, Web Design by Jen Berry\">\n						<div class=\"details-close\">\n							<p>X</p>\n						</div>\n						<div class=\"details-close-arrow\">\n						</div>\n					</div>\n				</article>\n			</li>\n		</ul>\n	</section>\n\n	<section id=\"blog\">\n		<a name=\"blog\"></a>\n		<h3>Blog</h3>\n		<ul>\n			<li>\n				<article>\n					<header class=\"blog-header\">\n						<a href=\"#blog\" class=\"do-nothing\">\n							<div class=\"blog-date\">\n								<p>13</p>\n								<p>SEP</p>\n							</div>\n							<h4 class=\"blog-title\">Copying a Joomla! website using Akeeba backup and restore</h4>\n						</a>\n					</header>\n					<div class=\"blog-content\">\n						<p>These are the simple steps I should have taken today, if I had done it the easy way.</p>\n						<p>The task, to put a <a href=\"http://www.joomla.org/\">Joomla!</a> website online from a .jpa file created with the Joomla extention <a href=\"https://www.akeebabackup.com\"/>Akeeba backup,</a> working from the command line with SSH and SCP to interact with a server running Debian.</p>\n						<ol>\n							<li>Create a fresh install of Joomla! with a MySQL database</li>\n							<ol>\n								<li>Create a new MySQL database and user with a password, and grant all permissions to that user</li>\n								<li>Extract (unzip) the Joomla! download file into the web root on the server (for example into '/var/www/mysite/')</li>\n								<li>Go to the new Joomla! homepage by typing in the domain name (or server ip if you don't have a domain yet) of your website into your browser (eg www.yourdomain.com), and follow the instructions to install it.</li>\n							</ol>	\n							<li>Use <a href=\"https://www.akeebabackup.com/products/akeeba-kickstart.html\">Akeeba Kickstart</a> to unpack the .jpa file and copy the website over the Joomla installation</li>\n							<ol>\n								<li>Extract the Kickstart download somewhere, and copy kickstart.php into your web root (the same place you extracted the Joomla file to)</li>\n								<li>Place the .jpa file in the same directory</li>\n								<li>Open the kickstart file in your browser by typing www.yourdomain.com/kickstart.php and follow the instructions to restore it. When connecting to the database select the option to drop any tables already in the database, or do it manually later</li>\n								<li>Make sure the '$live_site' in the Joomla configuration.php file is pointing to the right place (eg www.mydomain.com)</li>\n							</ol>\n						</ol>	\n\n					</div>\n				</article>\n			</li>\n			<li>\n				<article>\n					<header class=\"blog-header\">\n						<a href=\"#blog\" class=\"do-nothing\">\n							<div class=\"blog-date\">\n								<p>10</p>\n								<p>SEP</p>\n							</div>\n							<h4 class=\"blog-title\">The basics of search engine optimisation (SEO)</h4>\n						</a>\n					</header>\n					<div class=\"blog-content\">\n						<p>SEO is a huge topic, and companies invest huge amounts of money and effort researching and developing ways to improve their rankings on search engines. This makes it seem a very intimidating and intractable topic to hopeful young web developers like myself. But actually the basics are pretty simple, and mostly common sense.</p>\n						<p>Most importantly, and obviously, you need to make sure your HTML, CSS and JavaScript code is valid and following best practices. You could try <a href=”http://www.w3.org/QA/Tools/”>W3C’s validation tools</a>, <a href=”http://csslint.net/”>Lint</a>, and <a href=”http://www.jshint.com/”>JSHint</a> to check your site.</p>\n						<p> Firstly: design for users, not for search engines.\n						There's been a kind of arms race between search engines and websites trying to increase traffic in any way they can. For example in the beginning search engines used helpful keyword information embedded in the html &lt;meta&gt; tags to determine the content of websites, but malicious websites would use that to promote their website by stuffing it with popular keywords that were nothing to do with the content of the website, and so the search engines had to get smarter. They are now very good at matching what uses are looking for to the actual content of a site, while also penalising sites that try to manipulate them.</p>\n						<p>Secondly: search engines read your website as plain text, they can't see the amazing graphics, JavaScript special effects, or CSS that you might have created to lead the user around the page and highlight important information. (there are also some users who will prefer to view websites this way too). If you only had the HTML to your page, would your site still be understandable by a user? Have a look at your website through tools like <a href=\"http://www.seo-browser.com/\">seo-browser.com</a> to try this out. </p>\n						<ol>\n							<li>Make sure all images have useful alt attributes to display when the images can't be seen.</li>\n							<li>Your HTML should have a good structure: make sure you are making correct use of heading tags &lt;h1&gt; to &lt;h6&gt;, and in HTML5 the new structural tags such as &lt;heading&gt;, &lt;section&gt;, and &lt;article&gt;.</li>\n							<li>Tip: Images can go in &lt;h1&gt; elements, and the alt text is treated as the heading by search engines, this way you can have your fancy heading graphic, while also maintaing the document structure to be picked up by search engines.</li>\n						</ol>\n						<p>Thirdly. Lets talk about keywords. Keywords are just as important for a user browsing your webpage looking for information, as they are for search engine rankings. Again, if you design for the user, the search engines will take care of themselves.</p>\n						<p>Fourthly: what appears in search engine results is the title and meta description of your page, so make sure these are sensible to ensure people will click you when you do appear in search engines.</p>\n\n					</div>\n				</article>\n			</li>\n			<li>\n				<article>\n					<header class=\"blog-header\">\n						<a href=\"#blog\" class=\"do-nothing\">\n							<div class=\"blog-date\">\n								<p>05</p>\n								<p>SEP</p>\n							</div>\n							<h4 class=\"blog-title\">Getting back in the game</h4>\n						</a>\n					</header>\n					<div class=\"blog-content\">\n						<p>After a year galavanting around the world, my web skills were a little rusty, and any web developer worth their salt needs a good website, so the obvious thing to do was to build myself a website and get stuck in to coding again. The artist in me wanted to design it too, but in the end I decided that time was of the essence, and I opted to buy a photoshop template I liked the look of, although I made a few customisations. I became familliar with HTML5, CSS3, and JQuery, all of which proved to be more straight forward than I was expecting, although they have their quirks of course, I even threw in a little SVG animation. And all this took about 8 working days. Win</p>\n						<p><mark>Next step: optimise for mobile phones as well</mark></p>\n					</div>\n				</article>\n			</li>\n			<li>\n				<article>\n					<header class=\"blog-header\">\n						<a href=\"#blog\" class=\"do-nothing\">\n							<div class=\"blog-date\">\n								<p>20</p>\n								<p>AUG</p>\n							</div>\n							<h4 class=\"blog-title\">About Me</h4>\n						</a>\n					</header>\n					<div class=\"blog-content\">\n						<p>I graduated from Cambridge University in 2009 with an upper second class degree in Natural Sciences. It was during my time at Cambridge that I got into making websites in my spare time. My first real job was as a User Experience Designer for an international printer manufacturing company. They liked me because I learned quickly, could write good code, and also had an intuative eye for design. In 2012 I left the office to go out and see the world for a year, and had many amazing and wonderful experiences. Now I have settled down in London and earn my living making websites.</p>\n					</div>\n				</article>\n			</li>\n		</ul>\n	</section>\n\n	<section id=\"about-me\">\n		<a name=\"about-me\"></a>\n		<h3>About me</h3>\n		<p>I graduated from Cambridge University in 2009 with an upper second class degree in Natural Sciences. It was during my time at Cambridge that I got into making websites in my spare time. My first real job was as a User Experience Designer for an international printer manufacturing company. They liked me because I learned quickly, could write good code, and also had an intuative eye for design. In 2012 I left the office to go out and see the world for a year, and had many amazing and wonderful experiences. Now I have settled down in London and earn my living making websites.</p>\n\n		<figure>\n			<img id=\"picture-of-me\" src=\"img/jenberry.jpg\" alt=\"Picture of Jen Berry, Web developer\">\n			<figcaption>\n				<a href=\"http://www.linkedin.com/pub/jennifer-berry/1b/240/233\" target=\"_blank\">\n					<img class=\"social-media\" src=\"img/LinkedIn_Logo30px.png\" alt=\"LinkedIn\" title=\"Link to Jen Berry's LinkedIn\" />\n		 		</a>\n		 		<a href=\"https://twitter.com/jennnen\" target=\"_blank\">\n					<img class=\"social-media\" src=\"img/twitter-bird-dark-bgs.png\" alt=\"Twitter\" title=\"Link to Jen Berry's Twitter\"/>\n		 		</a>\n				<p id=\"name\">Jen Berry</p>\n				<p id=\"description\">Web Developer</p>\n			</figcaption>\n		</figure>\n	</section>\n\n	<section id=\"contact\">\n		<a name=\"contact\"></a>\n		<h3>Contact me</h3>\n\n		<iframe id=\"googleMap\" src=\n		\"https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=nw10+6aw&amp;aq=&amp;sll=51.528642,-0.101599&amp;sspn=0.762093,1.967926&amp;ie=UTF8&amp;hq=&amp;hnear=London+NW10+6AW,+United+Kingdom&amp;ll=51.530386,-0.233484&amp;spn=0.76517,1.967926&amp;t=m&amp;z=10&amp;output=embed\">\n		</iframe>\n\n		<div id=\"contact-box\">\n			<div id=\"contact-container\">\n				<div id=\"phone-details\">\n					<div id=\"phone-icon\">\n						<img src=\"img/phone-icon.png\" alt=\"phone icon\" />\n					</div>\n					<h4>Give me a call</h4>\n					<div id=\"phone-number\"></div>\n				</div>\n				<div id=\"email-details\">\n					<div id=\"email-icon\">\n						<img src=\"img/email-icon.png\" alt=\"email icon\" />\n					</div>\n					<h4 id=\"email-heading\">Send me a message</h4>\n\n					<form id=\"contact-form\" method=\"post\" action=\"mailto:jenberrymail+website@gmail.com?subject=Contact_form\" enctype=\"text/plain\">\n						<fieldset id=\"form-fieldset\">\n							<input id=\"name-input\" type=\"text\" name=\"name\" placeholder=\"Name\" required />\n							\n							<input id=\"email-input\" type=\"email\" name=\"email\" placeholder=\"E-mail\" required />\n						</fieldset>\n							\n							<textarea id=\"message-area\" name=\"message\" placeholder=\"Message\" required></textarea>\n\n							<input id=\"send-button\" type=\"submit\" name=\"submit\" value=\"Send\" />\n					</form>\n				</div>\n			</div>\n		</div>\n	</section>\n</body>\n\n<script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n  ga('create', 'UA-43833120-1', 'jenberry.co.uk');\n  ga('send', 'pageview');\n\n</script>\n\n</html>",
+			"file": "index.html",
+			"file_size": 28081,
+			"file_write_time": 1379114008000000,
+			"settings":
+			{
+				"buffer_size": 28063,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 7822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "$(document).ready(function(){\n\n//home animation\n	$(\"#title-i-am\").fadeIn(1000,function(){\n		$(\"#title-web-developer\").fadeIn(1000,function(){\n			$(\"#title-obsessed\").slideDown(500);\n		});\n	});\n\n//skills detail sliders\n	function deselectSkill(){\n		var $skillDescription = $('.skills-description');\n		$skillDescription.find('p').animate({\n				'opacity':0\n			},500);\n		$skillDescription.slideUp(500);\n		$skillDescription.find('p').css(\"display\",\"none\");\n		$(\"#skills circle\").css(\n			'stroke', '#d5d5d5'\n		);\n	}\n	\n\n	function selectSkill(circle, paragraph, box){\n		deselectSkill();\n		paragraph.css(\"display\",\"block\");\n		box.slideDown(500, function(){\n			paragraph.animate({\n				'opacity':1\n			},500);\n		});\n		circle.css(\n			'stroke', '#fc5703'\n		);\n	}\n	\n\n	$(\"#skill1\").on('click',function(){\n		selectSkill($(this),$(\"#skill1-desc\"),$(\"#top-left\"));\n	});\n\n	$(\"#skill2\").on('click',function(){\n		selectSkill($(this),$(\"#skill2-desc\"),$(\"#top-right\"));\n	});\n\n	$(\"#skill3\").on('click',function(){\n		selectSkill($(this),$(\"#skill3-desc\"),$(\"#bottom-right\"));\n	});\n\n	$(\"#skill4\").on('click',function(){\n		selectSkill($(this),$(\"#skill4-desc\"),$(\"#bottom-left\"));\n	});\n\n	$(\"#skill5\").on('click',function(){\n		selectSkill($(this),$(\"#skill5-desc\"),$(\"#bottom-left\"));\n	});\n\n	$(\"#skill6\").on('click',function(){\n		selectSkill($(this),$(\"#skill6-desc\"),$(\"#top-left\"));\n	});\n\n\n\n// blog sliders\n	var activeBlog=0;\n	$(\".blog-header\").on('click',function(){\n		var index = $(\".blog-header\").index(this) +1;\n		var $blogIndex = $(\"#blog li:nth-child(\"+index+\")\");\n		\n		if (activeBlog === index)\n		{\n			$blogIndex.find('.blog-content').slideUp(\"slow\");\n			$blogIndex.find('.blog-header').css(\"background-color\",\"#313131\");\n			activeBlog=0;\n		}\n		else\n		{\n			var $blogActive = $(\"#blog li:nth-child(\"+activeBlog+\")\");\n			$blogActive.find('.blog-content').slideUp(\"slow\");\n			$blogIndex.find('.blog-content').slideDown(\"slow\");\n			$blogActive.find('.blog-header').css(\"background-color\",\"#313131\");\n			$blogIndex.find('.blog-header').css(\"background-color\",\"#fc5703\");\n			activeBlog=index;\n		}\n	});\n\n//project sliders\n	var activeProject=0;\n	var $projectBrief = $(\"#projects .project-brief\");\n	$projectBrief.find('svg, .live-link').on('click',function(event){\n		event.stopPropagation();\n	});\n\n	$projectBrief.on('click',function(){\n		var index = $projectBrief.index(this) + 1;\n		if(activeProject !== index)\n		{\n			$(\"#projects li:nth-child(\"+activeProject+\") .project-details\")\n				.slideUp(\"slow\");\n			$(\"#projects li:nth-child(\"+index+\") .project-details\")\n				.slideDown(\"slow\");\n			activeProject=index;\n		}\n		else\n		{\n			$(\"#projects li:nth-child(\"+index+\") .project-details\")\n				.slideUp(\"slow\");\n			activeProject = 0;\n		}\n\n	});\n	$(\"#projects .details-close\").on('click',function(){\n		var index = $(\"#projects .details-close\").index(this) +1;\n		$(\"#projects li:nth-child(\"+index+\") .project-details\")\n				.slideUp(\"slow\");\n		activeProject = 0;\n	});\n\n\n//scrolling\n\n	$('a.scroll').on('click',function(event) {\n		event.preventDefault();\n		var href=$(this).attr('href');\n		var heightOfHeader = $('#page-header').height();\n		href = href.replace(\"#\",\"\");\n		$('html,body').animate({\n			'scrollTop' :\n			$('a[name='+href+']').offset().top-heightOfHeader\n		},1000);\n\n	});\n	$('a.do-nothing').on('click',function(event){\n		event.preventDefault();\n	});\n\n	$(window).scroll(function(){\n		var heightOfHeader = $('#page-header').height();\n		var windscroll = $(window).scrollTop() + heightOfHeader;\n		$('section').each(function(i) {\n\n			var positionOfSection = $(this).position().top;\n			var heightOfSection = $(this).height();\n			\n			if(windscroll + $(window).height() >= $(document).height())\n			{\n				$('nav a').eq(i).css('color','#313131');\n				$('nav a').eq(5).css('color','#fc5703');\n			}\n			else\n			{\n\n				if (positionOfSection - 150 <= windscroll && positionOfSection + heightOfSection - 150 > windscroll)\n				{\n					$('nav a').eq(i).css('color','#fc5703');\n				}\n				else\n				{\n					$('nav a').eq(i).css('color','#313131');\n				}\n			}\n		});\n\n	});\n\n});",
+			"file": "scripts.js",
+			"file_size": 4053,
+			"file_write_time": 1379352057000000,
+			"settings":
+			{
+				"buffer_size": 4024,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n* can the home animation be done with CSS animations and transitions?\n* can make home animation start when go back to home\n* make skills scroll to explanation\n* when sliding projecrts - scroll to top of project\n* make video stop when closed\n* projects -multiple images with left/right arrows\n\n*Need icon for tab\n*home animation shouldn't start until background has loaded\n*need a good intro paragraph - for thumbnails on facebook and linked in\n*need a good picture - for thumbnails\n\n*SCSS or LESS, ymmv?\n*GruntJS\n*write techie blog articles\n*hang out on StackOverflow.com and help people out\n*publish a small project on GitHub.com\n\n*jQuery selector calls are expensive (read slow), so you need to try and minimise them as much as possible.\n\n\n**__RESPONSIVE__**\n* phones:\nNokia - 240x320px\nSmartphone - 320x480px",
+			"settings":
+			{
+				"buffer_size": 812,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n\nHosting: £49.99/year - fix by december, down to $15/year\n\nE27\n11W = 60W \n23W = 100W",
+			"settings":
+			{
+				"buffer_size": 85,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "UI developer\ncanay warf\n400 - 500\n3 months + extension",
+			"settings":
+			{
+				"buffer_size": 54,
+				"line_ending": "Unix",
+				"name": "UI developer"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 54.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"lint",
+				"SublimeLinter: Extract Annotations"
+			],
+			[
+				"sscss",
+				"Set Syntax: CSS"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"ssja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ssc",
+				"Set Syntax: CSS"
+			],
+			[
+				"ss html",
+				"Set Syntax: HTML5"
+			],
+			[
+				"sshtml5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"sniphtml",
+				"Snippet: Simple HTML5 Boilerplate"
+			],
+			[
+				"snihtm",
+				"Snippet: DOCTYPE HTML"
+			],
+			[
+				"sniht",
+				"Snippet: html"
+			],
+			[
+				"ssh",
+				"Set Syntax: HTML5"
+			],
+			[
+				"ss css",
+				"Set Syntax: CSS"
+			],
+			[
+				"ssjq",
+				"Set Syntax: jQuery (JavaScript)"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"paci",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jen/.config/sublime-text-2/Packages/User/SublimeLinter.sublime-settings",
+		"/home/jen/.config/sublime-text-2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/jen/workspace/myportfolio/testlint.css",
+		"/home/jen/.config/sublime-text-2/Packages/SublimeLinter/Default (Linux).sublime-keymap",
+		"/home/jen/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/jen/.config/sublime-text-2/Packages/SublimeLinter/README.md",
+		"/home/jen/.config/sublime-text-2/Packages/AdvancedNewFile/README.md",
+		"/home/jen/.config/sublime-text-2/Packages/User/CSS/background-shorthand.sublime-snippet",
+		"/home/jen/.config/sublime-text-2/Packages/User/CSS/padding-all.sublime-snippet",
+		"/home/jen/.config/sublime-text-2/Packages/User/CSS/margin-all.sublime-snippet",
+		"/home/jen/.config/sublime-text-2/Packages/User/CSS/border-shorthand.sublime-snippet",
+		"/home/jen/workspace/myportfolio/myportfolio.sublime-project",
+		"/home/jen/workspace/myportfolio/style.css",
+		"/home/jen/workspace/9 worlds/9 worlds",
+		"/home/jen/workspace/EUSE/Spec",
+		"/home/jen/EUSE/Spec",
+		"/home/jen/website/scripts.js",
+		"/home/jen/website/style.css",
+		"/home/jen/website/index.html",
+		"/home/jen/Documents/Jobs/ChangeLab23 Web Developer application",
+		"/home/jen/Bugs/Wireless connection issue",
+		"/home/jen/Downloads/057039427867-20130906-1523.csv",
+		"/media/7091592500EA96CB/Adam's computer/website/scripts.js",
+		"/media/7091592500EA96CB/Adam's computer/website/style.css",
+		"/media/7091592500EA96CB/Adam's computer/website/index.html",
+		"/media/7091592500EA96CB/Adam's computer/website/sendmail.asp"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ignore",
+			"key binding",
+			"circle",
+			"class",
+			"circle",
+			"page-header",
+			" ",
+			"skillDescription",
+			"deselectSkill",
+			"105",
+			"blog-cont",
+			"view live",
+			"<a",
+			"blog",
+			"details-button",
+			"cur",
+			"View live website",
+			"<a ",
+			"img",
+			"alt",
+			"twitter",
+			"details-close",
+			"project-brief",
+			"cursor",
+			"poin",
+			":0px",
+			" 0px",
+			"0px",
+			"14",
+			"h4",
+			"font-size",
+			"essence",
+			"line-height",
+			"spacin",
+			"line",
+			"phone-number",
+			"phone",
+			"h3",
+			"quickstep-video",
+			"\"details\"",
+			".details",
+			"details",
+			"skill1-text",
+			"home-title",
+			"skillsNav",
+			"header",
+			"&",
+			"quickstep-video",
+			"contact",
+			"conta",
+			"cont",
+			"circle",
+			"project-brief",
+			"skills-blurb",
+			"project-details",
+			"submit",
+			"home-title",
+			"margin",
+			"section",
+			"text-align",
+			"section",
+			"<a"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 28063,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4060,
+								4060
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1173.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 7822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6809,
+								6809
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7344.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scripts.js",
+					"settings":
+					{
+						"buffer_size": 4024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								750,
+								750
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								514,
+								514
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"auto_name": "",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"settings":
+					{
+						"buffer_size": 85,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"auto_name": "",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"settings":
+					{
+						"buffer_size": 54,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"auto_name": "UI developer",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 122.0,
+	"status_bar_visible": true
+}
