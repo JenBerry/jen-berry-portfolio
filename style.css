@@ -8,6 +8,15 @@ body
 	text-align: center;
 	font-size: 14px;
 }
+
+p.default{
+	margin: 1em 0 1em 0;
+}
+ul.default{
+	margin: 1em 0 1em 2em;
+}
+
+
 a{
 	text-decoration: none;
 	color:#313131;
@@ -24,6 +33,11 @@ section
 {
 	width: 100%;
 	position: relative;
+}
+code
+{
+	display:block;
+	padding-left: 20px;
 }
 section#skills, section#blog, section#contact
 {
@@ -334,7 +348,7 @@ figcaption
 	color: #313131;
 	padding-top:60px;
 }
-#blog ul{
+.blog-list, .project-list{
 	padding-top:50px;
 	padding-bottom:150px;
 }
@@ -383,9 +397,7 @@ figcaption
 	line-height:18px;
 
 }
-.blog-content p{
-	padding-top:1em;
-}
+
 .blog-content a{
 	color:#fc5703;
 }

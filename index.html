@@ -19,10 +19,13 @@
 	<header id="page-header">
 		<h1 id="logo">Jen Berry
 			<a href="http://www.linkedin.com/pub/jennifer-berry/1b/240/233" target="_blank">
-				<img class="social-media" src="img/LinkedIn_Logo30px.png" alt="Linked In" title="Link to Jen Berry's LinkeIn" />
+				<img class="social-media" src="img/LinkedIn_Logo30px.png" alt="Linked In" title="Jen Berry on LinkeIn" />
 		 	</a>
 	 		<a href="https://twitter.com/jennnen" target="_blank">
-				<img class="social-media" src="img/twitter-bird-light-bgs.png" alt="Twitter" title="Link to Jen Berry's Twitter"/>
+				<img class="social-media" src="img/twitter-bird-light-bgs.png" alt="Twitter" title="Jen Berry on Twitter"/>
+	 		</a>
+	 		<a href="https://github.com/JenBerry" target="_blank">
+				<img class="social-media" src="img/GitHub-Mark-32px.png" alt="GitHub" title="Jen Berry on GitHub"/>
 	 		</a>
 		</h1>
 		<nav id="page-nav"><ul>
@@ -64,7 +67,7 @@
 		<div id="skills-container">
 
 			<svg id="myCanvas" width="600" height="600">
-				<circle id="centerCircle" cx="300" cy="300" r="120" fill="#fc5703" stroke="#d5d5d5" stroke-width="20">
+				<circle id="centercircle" cx="300" cy="300" r="120" fill="#fc5703" stroke="#d5d5d5" stroke-width="20">
 				</circle>
 				<text x="300" y="300" fill="#313131" style="dominant-baseline: central; text-anchor:middle; font-size:24px; pointer-events:none;">
 					Primary Skills
@@ -72,42 +75,42 @@
 
 
 				<circle id="skill1" cx="300" cy="90" r="40" fill="#313131" stroke="#d5d5d5" stroke-width="10">
-					<animateMotion path="M 0 210 L 0 0" dur="1s" begin="centerCircle.click" />
+					<animateMotion path="M 0 210 L 0 0" dur="1s" begin="centercircle.click" />
 				</circle>
 				<text x="300" y="90" fill="#d5d5d5" style="dominant-baseline: central; text-anchor:middle; pointer-events:none;">
 					HTML5
 				</text>
 
 				<circle id="skill2" cx="495" cy="200" r="40" fill="#313131" stroke="#d5d5d5" stroke-width="10">
-					<animateMotion path="M -195 100 L 0 0" dur="1s" begin="centerCircle.click" />
+					<animateMotion path="M -195 100 L 0 0" dur="1s" begin="centercircle.click" />
 				</circle>
 				<text x="495" y="200" fill="#d5d5d5" style="dominant-baseline: central; text-anchor:middle; pointer-events:none;">
 					Django
 				</text>
 
 				<circle id="skill3" cx="495" cy="400" r="40" fill="#313131" stroke="#d5d5d5" stroke-width="10">
-					<animateMotion path="M -195 -100 L 0 0" dur="1s" begin="centerCircle.click" />
+					<animateMotion path="M -195 -100 L 0 0" dur="1s" begin="centercircle.click" />
 				</circle>
 				<text x="495" y="400" fill="#d5d5d5" style="dominant-baseline: central; text-anchor:middle; pointer-events:none;">
 					MySQL
 				</text>
 
 				<circle id="skill4" cx="300" cy="510" r="40" fill="#313131" stroke="#d5d5d5" stroke-width="10">
-					<animateMotion path="M 0 -210 L 0 0" dur="1s" begin="centerCircle.click" />
+					<animateMotion path="M 0 -210 L 0 0" dur="1s" begin="centercircle.click" />
 				</circle>
 				<text x="300" y="510" fill="#d5d5d5" style="dominant-baseline: central; text-anchor:middle; pointer-events:none;">
 					Qt Quick
 				</text>
 
 				<circle id="skill5" cx="105" cy="400" r="40" fill="#313131" stroke="#d5d5d5" stroke-width="10">
-					<animateMotion path="M 195 -100 L 0 0" dur="1s" begin="centerCircle.click" />
+					<animateMotion path="M 195 -100 L 0 0" dur="1s" begin="centercircle.click" />
 				</circle>
 				<text x="105" y="400" fill="#d5d5d5" style="dominant-baseline: central; text-anchor:middle; pointer-events:none;">
 					CSS3
 				</text>
 
 				<circle id="skill6" cx="105" cy="200" r="40" fill="#313131" stroke="#d5d5d5" stroke-width="10">
-					<animateMotion path="M 195 100 L 0 0" dur="1s" begin="centerCircle.click" />
+					<animateMotion path="M 195 100 L 0 0" dur="1s" begin="centercircle.click" />
 				</circle>
 				<text fill="#d5d5d5" style="pointer-events:none;">
 					<tspan x="105" y="193" style="dominant-baseline: central; text-anchor:middle;">Java</tspan>
@@ -148,7 +151,7 @@
 	<section id="projects">
 		<a name="projects"></a>
 		<h3>Projects</h3>
-		<ul>
+		<ul class="project-list">
 			<li>
 				<article>
 					<div class="project-brief">
@@ -183,10 +186,13 @@
 
 					</div>
 					<div class="project-details">
-								<p><mark>You are looking at it!</mark></p>
-
+								<p><mark>You are looking at it!</mark><br><br><br></p>
+						<div class="details-close">
+							<p>X</p>
 						</div>
-					
+						<div class="details-close-arrow">
+						</div>
+					</div>
 				</article>
 			</li>
 
@@ -401,7 +407,107 @@
 	<section id="blog">
 		<a name="blog"></a>
 		<h3>Blog</h3>
-		<ul>
+		<ul class="blog-list">
+			<li>
+				<article>
+					<header class="blog-header">
+						<a href="#blog" class="do-nothing">
+							<div class="blog-date">
+								<p>20</p>
+								<p>SEP</p>
+							</div>
+							<h4 class="blog-title">Setting up git version control and github</h4>
+						</a>
+					</header>
+					<div class="blog-content">
+						<p class="default"><a href="http://git-scm.com/" target="_blank">Git</a> is a pretty simple, fast, yet powerful version control tool. It means you can keep track of all changes you make to a project and revert to earlier versions at any time. This gives you the peace of mind that everything you do is reversable, and is indispensable when working on live websites. You can also branch your code to do a side project in parallel and merge them together later, and allows for multiple people to work on the same project without worrying about interfereing with each other.</p>
+						<p class="default"><a href="https://github.com/" target="_blank">Github</a> is an online community of git users that allows easy online code sharing and project collaboration.</p>
+						<p class="default">How to set up git version control on your project.</p>
+						<ul class="default">
+							<li>
+								Install git, I'm using Ubuntu, so I will type this into the terminal
+									<code>sudo apt-get install git</code>
+							</li>
+							<li>
+								Tell git your username and email - this information is saved with every commit and is especially important when sharing code. The following sets the global configuration, which will be used for everything you do. It is possible to set this for individual projects as well.
+									<code>git config --global user.name "Your Name"</code>
+									<code>git config --global user.email "your_email@example.com"</code>
+							</li>
+							<li>
+								Go to the working directory you would like to version control
+									<code>cd ~/workspace/myproject</code>
+							</li>
+							<li>
+								Initialise an empty reposotory (repo)
+									<code>git init</code>
+							</li>
+							<li>
+								Now you have to add the files you want to control in the staging area ready to be committed, this must be done before every commit. To add everything in the directory:
+									<code>git add .</code>
+							</li>
+							<li>
+								You can check the status of files that have changed, and add or remove files before committing.
+								<code>git status</code>
+							</li>
+							<li>
+								Finally, you commit them to the repo, with a description of the changes you are committing for later reference.
+									<code>git commit -m "description"</code>
+								You need to do a commit every time you want to save the current state of the project, if you don't commit regularly, it becomes useless.
+							</li>
+							<li>
+								Note: if files have been deleted and you want to remove them from the repositary, use the -u option, then commit.
+									<code>git add -u .</code>
+							</li>
+						</ul>
+
+						<p class="default">Setting up a github account.</p>
+
+						<ul class="default">
+							<li>Go to <a href="www.gothub.com">github.com</a> and sign up for an account</li>
+							<li>
+								In order to connect to your account and upload your repo you will need a SSH key. Here is how to create a new one:
+								<code>ssh-keygen -t rsa -C "your_email@example.com"</code>
+								<code>ssh-add id_rsa</code>
+								Choose a passphrase
+							</li>
+							<li>
+								Now you can give your public key to github. Copy the contents of ~/.ssh/id_rsa.pub
+								<code>xclip -sel clip &lt; ~/.ssh/id_rsa.pub</code>
+								Go to your github account > account settings > SSH keys > add SSH key, and then paste in the key and save it.
+							</li>
+							<li>
+								To see if its working you can try to SSH into github
+								<code>ssh -T git@github.com</code>
+								Enter your passphrase, then you should see the following message:
+								<code>Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.</code>
+							</li>
+							<li>
+								Next you need to create a repo on github to upload your project to.
+								Go you your github account, select 'create a new repo', and fill in the required information.
+								Your repo will have a HTTPS clone URL, copy this.
+							</li>
+							<li>
+								Now go back to your terminal in your project directory, and you will tell it where the online repositary is, and call it 'origin'
+								<code>git remote add origin [HTTPS clone URL]</code>
+							</li>
+							<li>
+								Fnally you will push our git repo up to github
+								<code>git push origin master</code>
+							</li>
+							<li>
+								If there are changes in the github repo, (for example you created a readme file,) you will need to pull the changes to your local repo before you can push your files up
+								<code>git pull origin</code>
+							</li>
+						</ul>
+						<p class="default">Useful resources</p>
+						<ul class="default">
+							<li><a href="http://net.tutsplus.com/tutorials/other/easy-version-control-with-git/">Easy Version Control with Git</a></li>
+							<li><a href="http://net.tutsplus.com/tutorials/other/getting-the-hang-of-github/">Getting the Hang of GitHub</a></li>
+							<li><a href="https://help.github.com/articles/generating-ssh-keys">Generating SSH Keys</a></li>
+						</ul>
+					</div>
+				</article>
+			</li>
 			<li>
 				<article>
 					<header class="blog-header">
@@ -414,23 +520,23 @@
 						</a>
 					</header>
 					<div class="blog-content">
-						<p>These are the simple steps I should have taken today, if I had done it the easy way.</p>
-						<p>The task, to put a <a href="http://www.joomla.org/">Joomla!</a> website online from a .jpa file created with the Joomla extention <a href="https://www.akeebabackup.com"/>Akeeba backup,</a> working from the command line with SSH and SCP to interact with a server running Debian.</p>
-						<ol>
+						<p class="default">These are the simple steps I should have taken today, if I had done it the easy way.</p>
+						<p class="default">The task, to put a <a href="http://www.joomla.org/">Joomla!</a> website online from a .jpa file created with the Joomla extention <a href="https://www.akeebabackup.com"/>Akeeba backup,</a> working from the command line with SSH and SCP to interact with a server running Debian.</p>
+						<ul class="default">
 							<li>Create a fresh install of Joomla! with a MySQL database</li>
-							<ol>
+							<ul class="default">
 								<li>Create a new MySQL database and user with a password, and grant all permissions to that user</li>
 								<li>Extract (unzip) the Joomla! download file into the web root on the server (for example into '/var/www/mysite/')</li>
 								<li>Go to the new Joomla! homepage by typing in the domain name (or server ip if you don't have a domain yet) of your website into your browser (eg www.yourdomain.com), and follow the instructions to install it.</li>
-							</ol>	
+							</ul>	
 							<li>Use <a href="https://www.akeebabackup.com/products/akeeba-kickstart.html">Akeeba Kickstart</a> to unpack the .jpa file and copy the website over the Joomla installation</li>
-							<ol>
+							<ul class="default">
 								<li>Extract the Kickstart download somewhere, and copy kickstart.php into your web root (the same place you extracted the Joomla file to)</li>
 								<li>Place the .jpa file in the same directory</li>
 								<li>Open the kickstart file in your browser by typing www.yourdomain.com/kickstart.php and follow the instructions to restore it. When connecting to the database select the option to drop any tables already in the database, or do it manually later</li>
 								<li>Make sure the '$live_site' in the Joomla configuration.php file is pointing to the right place (eg www.mydomain.com)</li>
-							</ol>
-						</ol>	
+							</ul>
+						</ul>	
 
 					</div>
 				</article>
@@ -447,18 +553,18 @@
 						</a>
 					</header>
 					<div class="blog-content">
-						<p>SEO is a huge topic, and companies invest huge amounts of money and effort researching and developing ways to improve their rankings on search engines. This makes it seem a very intimidating and intractable topic to hopeful young web developers like myself. But actually the basics are pretty simple, and mostly common sense.</p>
-						<p>Most importantly, and obviously, you need to make sure your HTML, CSS and JavaScript code is valid and following best practices. You could try <a href=”http://www.w3.org/QA/Tools/”>W3C’s validation tools</a>, <a href=”http://csslint.net/”>Lint</a>, and <a href=”http://www.jshint.com/”>JSHint</a> to check your site.</p>
-						<p> Firstly: design for users, not for search engines.
+						<p class="default">SEO is a huge topic, and companies invest huge amounts of money and effort researching and developing ways to improve their rankings on search engines. This makes it seem a very intimidating and intractable topic to hopeful young web developers like myself. But actually the basics are pretty simple, and mostly common sense.</p>
+						<p class="default">Most importantly, and obviously, you need to make sure your HTML, CSS and JavaScript code is valid and following best practices. You could try <a href=”http://www.w3.org/QA/Tools/”>W3C’s validation tools</a>, <a href=”http://csslint.net/”>Lint</a>, and <a href=”http://www.jshint.com/”>JSHint</a> to check your site.</p>
+						<p class="default"> Firstly: design for users, not for search engines.
 						There's been a kind of arms race between search engines and websites trying to increase traffic in any way they can. For example in the beginning search engines used helpful keyword information embedded in the html &lt;meta&gt; tags to determine the content of websites, but malicious websites would use that to promote their website by stuffing it with popular keywords that were nothing to do with the content of the website, and so the search engines had to get smarter. They are now very good at matching what uses are looking for to the actual content of a site, while also penalising sites that try to manipulate them.</p>
-						<p>Secondly: search engines read your website as plain text, they can't see the amazing graphics, JavaScript special effects, or CSS that you might have created to lead the user around the page and highlight important information. (there are also some users who will prefer to view websites this way too). If you only had the HTML to your page, would your site still be understandable by a user? Have a look at your website through tools like <a href="http://www.seo-browser.com/">seo-browser.com</a> to try this out. </p>
-						<ol>
+						<p class="default">Secondly: search engines read your website as plain text, they can't see the amazing graphics, JavaScript special effects, or CSS that you might have created to lead the user around the page and highlight important information. (there are also some users who will prefer to view websites this way too). If you only had the HTML to your page, would your site still be understandable by a user? Have a look at your website through tools like <a href="http://www.seo-browser.com/">seo-browser.com</a> to try this out. </p>
+						<ul class="default">
 							<li>Make sure all images have useful alt attributes to display when the images can't be seen.</li>
 							<li>Your HTML should have a good structure: make sure you are making correct use of heading tags &lt;h1&gt; to &lt;h6&gt;, and in HTML5 the new structural tags such as &lt;heading&gt;, &lt;section&gt;, and &lt;article&gt;.</li>
 							<li>Tip: Images can go in &lt;h1&gt; elements, and the alt text is treated as the heading by search engines, this way you can have your fancy heading graphic, while also maintaing the document structure to be picked up by search engines.</li>
-						</ol>
-						<p>Thirdly. Lets talk about keywords. Keywords are just as important for a user browsing your webpage looking for information, as they are for search engine rankings. Again, if you design for the user, the search engines will take care of themselves.</p>
-						<p>Fourthly: what appears in search engine results is the title and meta description of your page, so make sure these are sensible to ensure people will click you when you do appear in search engines.</p>
+						</ul>
+						<p class="default">Thirdly. Lets talk about keywords. Keywords are just as important for a user browsing your webpage looking for information, as they are for search engine rankings. Again, if you design for the user, the search engines will take care of themselves.</p>
+						<p class="default">Fourthly: what appears in search engine results is the title and meta description of your page, so make sure these are sensible to ensure people will click you when you do appear in search engines.</p>
 
 					</div>
 				</article>
@@ -475,27 +581,12 @@
 						</a>
 					</header>
 					<div class="blog-content">
-						<p>After a year galavanting around the world, my web skills were a little rusty, and any web developer worth their salt needs a good website, so the obvious thing to do was to build myself a website and get stuck in to coding again. The artist in me wanted to design it too, but in the end I decided that time was of the essence, and I opted to buy a photoshop template I liked the look of, although I made a few customisations. I became familliar with HTML5, CSS3, and JQuery, all of which proved to be more straight forward than I was expecting, although they have their quirks of course, I even threw in a little SVG animation. And all this took about 8 working days. Win</p>
-						<p><mark>Next step: optimise for mobile phones as well</mark></p>
+						<p class="default">After a year galavanting around the world, my web skills were a little rusty, and any web developer worth their salt needs a good website, so the obvious thing to do was to build myself a website and get stuck in to coding again. The artist in me wanted to design it too, but in the end I decided that time was of the essence, and I opted to buy a photoshop template I liked the look of, although I made a few customisations. I became familliar with HTML5, CSS3, and JQuery, all of which proved to be more straight forward than I was expecting, although they have their quirks of course, I even threw in a little SVG animation. And all this took about 8 working days. Win</p>
+						<p class="default"><mark>Next step: optimise for mobile phones as well</mark></p>
 					</div>
 				</article>
 			</li>
-			<li>
-				<article>
-					<header class="blog-header">
-						<a href="#blog" class="do-nothing">
-							<div class="blog-date">
-								<p>20</p>
-								<p>AUG</p>
-							</div>
-							<h4 class="blog-title">About Me</h4>
-						</a>
-					</header>
-					<div class="blog-content">
-						<p>I graduated from Cambridge University in 2009 with an upper second class degree in Natural Sciences. It was during my time at Cambridge that I got into making websites in my spare time. My first real job was as a User Experience Designer for an international printer manufacturing company. They liked me because I learned quickly, could write good code, and also had an intuative eye for design. In 2012 I left the office to go out and see the world for a year, and had many amazing and wonderful experiences. Now I have settled down in London and earn my living making websites.</p>
-					</div>
-				</article>
-			</li>
+			
 		</ul>
 	</section>
 
@@ -508,10 +599,13 @@
 			<img id="picture-of-me" src="img/jenberry.jpg" alt="Picture of Jen Berry, Web developer">
 			<figcaption>
 				<a href="http://www.linkedin.com/pub/jennifer-berry/1b/240/233" target="_blank">
-					<img class="social-media" src="img/LinkedIn_Logo30px.png" alt="LinkedIn" title="Link to Jen Berry's LinkedIn" />
+					<img class="social-media" src="img/LinkedIn_Logo30px.png" alt="LinkedIn" title="Jen Berry on LinkedIn" />
 		 		</a>
 		 		<a href="https://twitter.com/jennnen" target="_blank">
-					<img class="social-media" src="img/twitter-bird-dark-bgs.png" alt="Twitter" title="Link to Jen Berry's Twitter"/>
+					<img class="social-media" src="img/twitter-bird-dark-bgs.png" alt="Twitter" title="Jen Berry on Twitter"/>
+		 		</a>
+		 		<a href="https://github.com/JenBerry" target="_blank">
+					<img class="social-media" src="img/GitHub-Mark-32px-inverted.png" alt="GitHub" title="Jen Berry on GitHub"/>
 		 		</a>
 				<p id="name">Jen Berry</p>
 				<p id="description">Web Developer</p>

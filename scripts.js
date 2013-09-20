@@ -34,9 +34,6 @@ $(document).ready(function(){
 		);
 	}
 	
-	var hoo = 80
-	var pee = 78
-
 
 	$("#skill1").on('click',function(){
 		selectSkill($(this),$("#skill1-desc"),$("#top-left"));
