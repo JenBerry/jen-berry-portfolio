@@ -30,8 +30,11 @@ mark {
 
 code {
   display: block;
-  margin: 0 10px;
+  margin: 0 6%;
   color: grey; }
+
+ul {
+  padding: 0 0 0 3%; }
 
 /*remove list styles from lists*/
 .projectlist, .projectskills, .bloglist, .skillslist, .secondskillslist {

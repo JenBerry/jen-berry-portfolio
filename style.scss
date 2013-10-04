@@ -22,7 +22,8 @@ h1{margin: 10px 0}
 h2{margin: 0 0 50px 0; font-size:50px}
 h3{font-size:25px; font-weight: normal;}
 mark{background-color: transparent; color: $highlight-color}
-code{display:block;margin: 0 10px;color: grey}
+code{display:block;margin: 0 6%;color: grey}
+ul{padding:0 0 0 3%}
 
 /*remove list styles from lists*/
 .projectlist, .projectskills, .bloglist, .skillslist, .secondskillslist{
