@@ -229,27 +229,34 @@ section {
     display: inline-block;
     margin: 2px; }
 
-.projectskills li {
-  display: inline-block;
-  width: 60px;
-  height: 40px;
-  border-radius: 60px;
-  padding-top: 20px;
-  vertical-align: top;
-  border-width: 5px;
-  border-style: solid;
-  border-color: whitesmoke;
-  background-color: #313131;
-  font-size: 14px; }
+.projectskills {
+  width: 295px; }
+  .projectskills li {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    border-radius: 60px;
+    padding-top: 20px;
+    vertical-align: top;
+    border-width: 5px;
+    border-style: solid;
+    border-color: whitesmoke;
+    background-color: #313131;
+    font-size: 14px; }
 
 .viewlive, .viewproject {
   position: relative;
   width: 150px;
+  height: 22px;
   background-color: #fc5703;
   border-radius: 5px;
   padding: 10px; }
   .viewlive > a, .viewproject > a {
     color: white; }
+
+.noviewlive {
+  background-color: transparent;
+  color: transparent; }
 
 .viewprojectarrow {
   background-color: #fc5703;

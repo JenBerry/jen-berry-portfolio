@@ -183,6 +183,7 @@ section{
 		&>ul, &>div{display:inline-block;margin:2px}
 	}
 		.projectskills{
+			width: 295px;
 			li{
 				display:inline-block;
 				width: 60px; height: 40px; border-radius: 60px;
@@ -197,11 +198,15 @@ section{
 		}
 		.viewlive, .viewproject{
 			position: relative;
-			width: 150px;
+			width: 150px; height: 22px;
 			background-color: $highlight-color;
 			border-radius: $round-radius;
 			padding:10px;
 			&>a{color:white}
+		}
+		.noviewlive{
+			background-color: transparent;
+			color: transparent;
 		}
 			.viewprojectarrow{
 				background-color: $highlight-color;
@@ -229,7 +234,6 @@ section{
 		text-align: left;
 		color: #828282;
 	}
-	
 
 /*blog*/
 	.blogarticle{
