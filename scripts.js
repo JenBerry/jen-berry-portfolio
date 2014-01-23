@@ -62,4 +62,19 @@ $(document).ready(function(){
 		event.preventDefault();
 	});
 
+	//vertical center
+	function verticalCenter($elements)
+	{
+		$elements.each(function(){
+			var elementHeight = $( this ).height();
+			var parentHeight = $( this ).parent().height();
+			var offset = parentHeight/2 - elementHeight/2
+			$( this ).parent().css('position', 'relative');
+			$( this ).css('position','absolute');
+			$( this ).css('top', offset);
+		})
+	}
+	verticalCenter($('.verticalcenter'));
+
+
 });
