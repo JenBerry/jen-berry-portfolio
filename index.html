@@ -220,6 +220,207 @@
 				<li>
 					<article class="blogarticle">
 						<header class="blogsummary">
+							<time pubdate datetime="2014-02-05" class="blogdate">
+								<span class="day">05</span><span class="month">Feb</span>
+							</time>
+							<h3 class="blogtitle">Using meteor.js: creating a Blog</h3>
+						</header>
+						<div class="blogdetails">
+							<p>I'm experimenting with <a href="https://www.meteor.com/" target="_blank">Meteor.js</a>. I am planning on recreating my website with it, eventually placing my projects and blog articles into a database, with a simple interface to add and edit them, rather than hardcoding them into the html like they are currently. Step one, the blog:</p>
+
+							<p>Installation is easy:</p>
+
+							<code>curl https://install.meteor.com | /bin/sh</code>
+
+							<p>I followed this <a href="http://sebastiandahlgren.se/2013/07/17/tutorial-writing-your-first-metor-application/" target="_blank">tutorial by Sebastian Dahlgren</a> to set up a project with the following file structure.</p>
+
+							<ul>
+							  <li>myProject</li>
+							  <ul>
+							    <li>client</li>
+							    <ul>
+							      <li>client.html</li>
+							      <li>client.js</li>
+							      <li>client.css</li>
+							    </ul>
+							    <li>public</li>
+							    <li>server</li>
+							    <li>models.js</li>
+							  </ul>
+							</ul>
+
+
+							<p>First, I put my images, videos, and existing JavaScript into the public folder, then copied my CSS into client.css</p>
+
+							<p>Now on to the HTML. Meteor uses templates and a template looks like this:</p>
+							<code>
+							&lt;template name="myTemplate"&gt;
+								<code>&lt;p&gt;Hello&lt;/p&gt;</code>
+							&lt;/template&gt;
+							</code>
+							<p>It is inserted into a page like this:</p>
+							<code>{{&gt; myTemplate}}</code>
+
+							<p>I copied my HTML into separate templates for each section. My body tag then looks like this:</p>
+
+							<code>
+							&lt;body&gt;
+								<code>{{&gt; header}}</code>
+								<code>{{&gt; homeSection}}</code>
+								<code>{{&gt; skillsSection}}</code>
+								<code>{{&gt; projectsSection}}</code>
+								<code>{{&gt; blogSection}}</code>
+								<code>{{&gt; aboutSection}}</code>
+								<code>{{&gt; contactSection}}</code>
+								<code>{{&gt; footer}}</code>
+							&lt;/body&gt;
+							</code>
+
+							<p>So far, so good, my website looks and behaves exactly as it did before. Now, I'm going to focus on the blog section, and get it into the database.</p>
+							<p></p>
+							<h4>Data from the database</h4>
+
+							<p>To make a database for my blog I need to add this to models.js</p>
+								<code>Blog = new Meteor.Collection('blog');</code>
+							<p>And this to client.js</p>
+								<code>Template.blogSection.blog = function () {
+										<code>return Blog.find({}, {sort: {time: -1}});</code>
+								}</code>
+
+							<p>This is telling it to return the list of entries in Blog, newest first, when the property 'blog' is called in the template 'blogSection'.</p>
+
+							<p>I now need to access this from the HTML.</p>
+							<p>First I'm going to remove all my existing blog entries from the HTML except one, and put it into a new template called blogArticle, and change the variable information for variable names (highlighted below).</p>
+
+							<code>&lt;template name="blogSection"&gt;
+								<code>&lt;section&gt;
+									<code>&lt;a name="blog"&gt;&lt;/a&gt;</code>
+									<code>&lt;div class="menubutton"&gt;&lt;a href="#top" class="scroll"&gt;Menu&lt;/a&gt;&lt;/div&gt;</code>
+									<code>&lt;header&gt;&lt;h2&gt;Blog&lt;/h2&gt;&lt;/header&gt;</code>
+									<code>&lt;div class="sectioncontent"&gt;
+										<code>&lt;ul class="bloglist"&gt;&lt;li&gt;
+												<code><mark>{{#each blog}}</mark>
+													<code><mark>{{&gt; blogArticle}}</mark></code>
+												<mark>{{/each}}</mark></code>
+										&lt;/li&gt;&lt;/ul&gt;</code>
+									&lt;/div&gt;</code>
+								&lt;/section&gt;</code>
+							&lt;/template&gt;</code>
+							<p></p>
+							<code>&lt;template name="blogArticle"&gt;
+									<code>&lt;article class="blogarticle"&gt;
+										<code>&lt;header class="blogsummary"&gt;
+											<code>&lt;time pubdate datetime="<mark>{{datetime}}</mark>" class="blogdate"&gt;
+												<code>&lt;span class="day"&gt;<mark>{{day}}</mark>&lt;/span&gt;</code>
+												<code>&lt;span class="month"&gt;<mark>{{monthName}}</mark>&lt;/span&gt;</code>
+											&lt;/time&gt;</code>
+											<code>&lt;h3 class="blogtitle"&gt;<mark>{{title}}</mark>&lt;/h3&gt;</code>
+										&lt;/header&gt;</code>
+										<code>&lt;div class="blogdetails"&gt;
+											<code><mark>{{{blogText}}}</mark></code>
+										&lt;/div&gt;</code>
+									&lt;/article&gt;</code>
+							&lt;/template&gt;</code>
+
+							<p>You might notice "blogText" is inside a tripple bracket, this is because it contains HTML, if I only used two brackets the html will be escaped, but with three brackets it is not.</p>
+							<p>
+							</p><p>To check it works we will need to manually add some database entries, we can do this right in the browser's console.</p>
+							<code>Blog.insert({date: new Date(), title: "A blog", blogText: "Hello Meteor"})</code>
+							<p>You should notice that in the template I want to use the date in a few different ways: 'datetime', 'day' &amp; 'monthName', now I could save these to the database as separate entries, but that would be rather redundant. We want to save the date once, and then format it to what we want when we use it. To do this we need to create some helpers in client.js.</p>
+							<p>There are two ways to do this. You can make template specific helpers like this:</p>
+							<code>
+							Template.myTemplate.foo = function() {
+							  <code>return "blah"; // (calculate value here)</code>
+							};
+							</code>
+							<p>I could use this to return the day like this:</p>
+							<code>Template.blogArticle.day = function() {
+								  <code>return this.date.getDate()</code>
+							};</code>
+							<p>Or you can register a general helper that works everywhere, and would look like this:</p>
+							<code>Handlebars.registerHelper("day", function() {
+								  <code>return this.date.getDate()</code>
+
+							});</code>
+							<p>Since formatting a date is quite a general task, I'm going to make a general helper, and for further elegance I'm going to make a single helper that can return the different formats I need.</p>
+							<code>Handlebars.registerHelper('datetime', function(date, format){
+								<code>if (format=="day"){
+									<code>return date.getDate()</code>
+								}</code>
+								<code>if (format=="monthName"){
+									<code>var monthNames = ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']</code>
+									<code>return monthNames[date.getMonth()]</code>
+								}</code>
+								<code>if (format == "date"){
+									<code>var year = date.getFullYear()</code>
+									<code>var month = ("0" + (date.getMonth()+1)).slice(-2)</code>
+									<code>var day = ("0" + date.getDate()).slice(-2)</code>
+									<code>return year+'-'+month+'-'+day;</code>
+								}</code>
+							})</code>
+							<p>Finally I need to update my template to take advantage of the new helper:</p>
+							<code>&lt;template name="blogArticle"&gt;
+									<code>&lt;article class="blogarticle"&gt;
+										<code>&lt;header class="blogsummary"&gt;
+											<code>&lt;time pubdate datetime="<mark>{{datetime date 'date'}}</mark>" class="blogdate"&gt;
+												<code>&lt;span class="day"&gt;<mark>{{datetime date 'day'}}</mark>&lt;/span&gt;</code>
+												<code>&lt;span class="month"&gt;<mark>{{datetime date 'monthName'}}</mark>&lt;/span&gt;</code>
+											&lt;/time&gt;</code>
+											<code>&lt;h3 class="blogtitle"&gt;{{title}}&lt;/h3&gt;</code>
+										&lt;/header&gt;</code>
+										<code>&lt;div class="blogdetails"&gt;
+											<code>{{{blogText}}}</code>
+										&lt;/div&gt;</code>
+									&lt;/article&gt;</code>
+							&lt;/template&gt;</code>
+							<p>Now we have a blog which displays entries from the database. I just need to insert all my blog entries into the database, however I don't want to do this from the console, I want a nice interface.</p>
+							<p></p>
+							<h4>Creating a form to insert new Blog articles</h4>
+							<p>Lets create a new HTML template with a form for adding new Blog articles</p>
+							<code>&lt;template name = "addBlog"&gt;
+								<code>&lt;p&gt;&lt;label for 'title'&gt;Title:&lt;/label&gt;&lt;/p&gt;</code>
+								<code>&lt;p&gt;&lt;input type="text" class="blogTitleInput" id="blogTitleInput" required&gt;&lt;/p&gt;</code>
+								<code>&lt;p&gt;&lt;label&gt;Text:&lt;/label&gt;&lt;/p&gt;</code>
+								<code>&lt;p&gt;&lt;textarea class="blogTextInput" id="blogTextInput" required&gt;&lt;/textarea&gt;&lt;/p&gt;</code>
+								<code>&lt;input type="submit" id='submitBlog' value = "Submit new blog article"&gt;</code>
+							&lt;/template&gt;</code>
+							<p>Now for the code in client.js that will insert it into the database</p>
+
+							<code>Template.addBlog.events = {
+								<code>'click input#submitBlog' : function () {
+									
+									<code>var date = new Date();</code>
+									<code>var title = document.getElementById('blogTitleInput');</code>
+									<code>var text = document.getElementById('blogTextInput');</code>
+
+									<code>if (title.value != '' &amp;&amp; text.value != ''){
+										<code>Blog.insert({
+											<code>date: date,</code>
+											<code>title: title.value,</code>
+											<code>blogText: text.value,</code>
+										});</code>
+
+										<code>//clear the form</code>
+										<code>document.getElementById('blogTitleInput').value = '';</code>
+										<code>document.getElementById('blogTextInput').value = '';</code>
+									}</code>
+								}</code>
+							}</code>
+
+							<p>There, that wasn't so hard. Now I just need to use these same techniques for editing an existing article, and to delete articles</p>
+							<p></p>
+							<h4>Next steps</h4>
+							<p>Of course it's not ready for publishing yet, there's still plenty to do, mainly security:</p>
+							<ul>
+							<li>Only show the editing options when I am logged in</li>
+							<li>Don't allow just anyone to access the database</li>
+							</ul>
+							<p>But I think this is enough for one post</p>
+							<p>You can see the full code for this, plus my git commit history, on my <a href="https://github.com/JenBerry/portfolio-2" target="_blank">github</a>, (although you will notice I did things in a slightly different order), and I will continue to update it as I experiment further</a>.
+						</div>
+					</article>
+					<article class="blogarticle">
+						<header class="blogsummary">
 							<time pubdate datetime="2014-01-25" class="blogdate">
 								<span class="day">25</span><span class="month">Jan</span>
 							</time>
