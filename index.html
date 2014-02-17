@@ -220,6 +220,20 @@
 				<li>
 					<article class="blogarticle">
 						<header class="blogsummary">
+							<time pubdate datetime="2014-02-17" class="blogdate">
+								<span class="day">17</span><span class="month">Feb</span>
+							</time>
+							<h3 class="blogtitle">Static site generaton: Use Django templates with Cactus</h3>
+						</header>
+						<div class="blogdetails">
+							<p>A situation web developers may be familiar with: you only need a static website, nothing complicated, shouldn't take too long, but there's a few different pages with repeated themes. Traditionally this means repeating your code on every page. Doesn't sound too bad though, you are a dab hand at copy and paste, right? But then you need to make a change to your menu, for example, and realise you then need to edit it on every page. You may have mad find-and-replace skillz, but there is a better way...</p>
+							<p>Enter: <a href="http://staticgen.com/" target="_blank">Static Site Generators</a></p>
+							<p>There are a whole heap of them out there, in a bunch of different languages, using varying templates. To illustrate their usefulness I'm going to focus on one that I have used recently: <a href="https://github.com/koenbok/Cactus/" target="_blank">Cactus</a>.</p>
+							<p>Cactus is a static site generator written in Python, and it uses the <a href="https://www.djangoproject.com/">Django</a> templating system. I chose it because I've used Django before and like it. This allows me to write django templates for my site, and code only the unique parts of each page. Cactus handles converting the templates into a static site for you. Every time you change the template, the static site will be updated while running the built-in server. It also comes with plug-ins for things like <a href="http://lesscss.org/" target="_blank">LESS</a> and <a href="http://sass-lang.com/"  target="_blank">SASS</a> and processes it for you. Lastly it makes it very easy to deploy the website online via <a href="http://aws.amazon.com/">Amazon Web Services</a>, so you have your site on the web in no time.</p>
+						</div>
+					</article>
+					<article class="blogarticle">
+						<header class="blogsummary">
 							<time pubdate datetime="2014-02-05" class="blogdate">
 								<span class="day">05</span><span class="month">Feb</span>
 							</time>
