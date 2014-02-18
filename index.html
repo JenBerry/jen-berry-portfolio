@@ -8,8 +8,18 @@
 			<title>Jen Berry, Web Developer</title>
 			<link rel="stylesheet" href="style.css">
 			<link rel="shortcut icon" href="img/favicon.ico">
+			<link rel="stylesheet" href="FlexSlider/flexslider.css">
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 			<script src="scripts.js"></script>
+			<script src="FlexSlider/jquery.flexslider-min.js"></script>
+			<script type="text/javascript">
+			  $(window).load(function() {
+			    $('.flexslider').flexslider({
+			    	slideshowSpeed: 3000,
+			    	pauseOnAction: false,
+			    });
+			  });
+			</script>
 			<script>
 				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -219,6 +229,86 @@
 		<div class="sectioncontent">
 			<ul class="bloglist">
 				<li>
+					<article class="blogarticle">
+						<header class="blogsummary">
+							<time pubdate datetime="2014-02-18" class="blogdate">
+								<span class="day">18</span><span class="month">Feb</span>
+							</time>
+							<h3 class="blogtitle">Easy image slideshows with Flexslider</h3>
+						</header>
+						<div class="blogdetails">
+							<p><a href="http://www.woothemes.com/flexslider/">Flexslider</a> is a jQuery toolkit that makes placing sladeshows into your website a breeze. The instuctions are so simple I'm not going to bother giving a tutorial, I'm just going to show you the code and give an example of it working to show off some of my <a href="http://www.jenberry.co.uk/art">Artwork</a> ;)</p>
+							<code>
+								&lt;head&gt;
+									<code>...</code>
+									<code>&lt;link rel="stylesheet" href="FlexSlider/flexslider.css""&gt;</code>
+									<code>&lt;script src="FlexSlider/jquery.flexslider-min.js"&gt;&lt;/script&gt;</code>
+									<code>&lt;script type="text/javascript"&gt;
+									  <code>$(window).load(function() {
+									    <code>$('.flexslider').flexslider({
+									    	<code>slideshowSpeed: 3000,</code>
+									    	<code>pauseOnAction: false,</code>
+									    });</code>
+									  });</code>
+									&lt;/script&gt;</code>
+									<code>...</code>
+								&lt;/head&gt;</code>
+								<code>&lt;body&gt;
+									<code>...</code>
+									<code>&lt;div class="flexslider"&gt;
+									  <code>&lt;ul class="slides"&gt;
+									    <code>&lt;li&gt;
+									      <code>&lt;img src="FlexSlider/demo-images/psychedelic.jpg" alt="Psychedelic"/&gt;</code>
+									      <code>&lt;p&gt;Psychedelic&lt;/p&gt;</code>
+									    &lt;/li&gt;</code>
+									    <code>&lt;li&gt;
+									      <code>&lt;img src="FlexSlider/demo-images/lucky.jpg" alt="Lucky"/&gt;</code>
+									      <code>&lt;p&gt;Lucky&lt;/p&gt;</code>
+									    &lt;/li&gt;</code>
+									    <code>&lt;li&gt;
+									      <code>&lt;img src="FlexSlider/demo-images/merlot-and-rufus.jpg" alt="Merlot and Rufus"/&gt;</code>
+									      <code>&lt;p&gt;Merlot and Rufus&lt;/p&gt;</code>
+									    &lt;/li&gt;</code>
+									    <code>&lt;li&gt;
+									      <code>&lt;img src="FlexSlider/demo-images/peppered-moonlight.jpg" alt="Peppered Moonlight"/&gt;</code>
+									      <code>&lt;p&gt;Peppered Moonlight&lt;/p&gt;</code>
+									    &lt;/li&gt;</code>
+									    <code>&lt;li&gt;
+									      <code>&lt;img src="FlexSlider/demo-images/rainbow-temple.jpg" alt="Rainbow Temple"/&gt;</code>
+									      <code>&lt;p&gt;Rainbow Temple&lt;/p&gt;</code>
+									    &lt;/li&gt;</code>
+									  &lt;/ul&gt;</code>
+									&lt;/div&gt;</code>
+									<code>...</code>
+								&lt;/body&gt;
+							</code>
+							<div class="flexslider">
+							  <ul class="slides">
+							    <li>
+							      <img src="FlexSlider/demo-images/psychedelic.jpg" alt="Psychedelic"/>
+							      <p>Psychedelic</p>
+							    </li>
+							    <li>
+							      <img src="FlexSlider/demo-images/lucky.jpg" alt="Lucky"/>
+							      <p>Lucky</p>
+							    </li>
+							    <li>
+							      <img src="FlexSlider/demo-images/merlot-and-rufus.jpg" alt="Merlot and Rufus"/>
+							      <p>Merlot and Rufus</p>
+							    </li>
+							    <li>
+							      <img src="FlexSlider/demo-images/peppered-moonlight.jpg" alt="Peppered Moonlight"/>
+							      <p>Peppered Moonlight</p>
+							    </li>
+							    <li>
+							      <img src="FlexSlider/demo-images/rainbow-temple.jpg" alt="Rainbow Temple"/>
+							      <p>Rainbow Temple</p>
+							    </li>
+							  </ul>
+							</div>
+							<p>There are many customisation options. You can transition with fade or slide, you can add captions, you can use your own custom controls, change the speed and direction, and lots more.</p>
+						</div>
+					</article>
 					<article class="blogarticle">
 						<header class="blogsummary">
 							<time pubdate datetime="2014-02-17" class="blogdate">
