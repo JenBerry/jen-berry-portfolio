@@ -248,6 +248,100 @@
 				<li>
 					<article class="blogarticle">
 						<header class="blogsummary">
+							<time pubdate datetime="2014-03-28" class="blogdate">
+								<span class="day">28</span><span class="month">Mar</span>
+							</time>
+							<h3 class="blogtitle">Meteor.js - Security and Deployment</h3>
+						</header>
+						<div class="blogdetails">
+							<p>I introduced you to <a href="http://www.meteor.com" target="_blank">Meteor</a> in a previous blog post, and posted a tutorial on how to make a blog like this one. The next step is deploying it online, and the security issues that surround this.</p>
+							<p>Meteor makes it very easy to develop a website because, out of the box, it behaves as if the client - your browser, has full access to the database on the server. This is great for fast development, but you will notice the glaring security hole: You don't want just anyone to be able to edit your database from your website. You probably don't want just anyone to see all of the data from your database either. There are two packages that are responsible for this: <mark>autopublish</mark> and <mark>insecure</mark>.</p>
+							<h4>Autopublish</h4>
+							<p>The autopublish package means that the server automatically publishes all database data to the client. So let's remove this package:</p>
+							<code>$ Meteor remove autopublish</code>
+							<p>Now none of the data is published to the client, and we need to create some rules to allow the publishing of the data we want. We create these rules on the server.</p>
+							<code>
+								Meteor.publish( 'blog', function() {
+									<code>return Blog.find();</code>
+								});
+							</code>
+							<p>This will publish everything in the Blog collection, however I want to change the documents sent to the client based on whether I'm logged in or not (more about logging in later). If I'm logged in I want the client to see all the documents, if I'm not I only want it to see the 'published' documents. I will update the function on the server to do this:</p>
+							<code>
+								Meteor.publish('blog', function() {
+									<code>if (this.userId){
+										<code>return Blog.find();</code>
+									}</code>
+									<code>else{
+										<code>return Blog.find({published : true});</code>
+									}</code>
+								});
+							</code>
+							<p>Since I've named it 'blog', then on the client I need to create a rule to subscribe to it.</p>
+							<code>Meteor.subscribe("blog");</code>
+							<p>If, instead of naming it, I had passed <mark>null</mark>, then the client would automatically subscribe to it, like this:</p>
+							<code>Meteor.publish(null, function() { ... });</code>
+							<h4>Insecure</h4>
+							<p>The insecure package allows full insert, update, and remove access to the database from the client. We definitely don't want this when we deploy to the web, so lets remove it. From the command line:</p>
+							<code>$ Meteor remove insecure</code>
+							<p>Now nobody is allowed to do anything. I will need to create some rules to allow myself to write to the database when I'm logged in. Since I'm going to be the only user, it simplifies things, as I only need to check if anyone is logged in, rather than checking for a specific user</p>
+							<p>On the server:</p>
+							<code>
+								Blog.allow({
+									<code>'insert': function(userId) {
+										<code>if (userId){return true;}</code>
+										<code>else{return false;}</code>
+									},</code>
+									<code>'update': function(userId) {
+										<code>if (userId){return true;}</code>
+										<code>else{return false;}</code>
+									},</code>
+									<code>'remove': function(userId) {
+										<code>if (userId){return true;}</code>
+										<code>else{return false;}</code>
+									}</code>
+								});
+							</code>
+							<p>And that's it, any requests from the client that don't follow these rules will be rejected.</p>
+							<h4>Logging in</h4>
+							<p>Now, in order for me to do anything, I'm going to need to be logged in. Meteor has packages for this. It's possible to log in with google, facebook, github, and more, by installing the relevant package. Since I'm going to be the only user, I'm going to use meteors own log in system, <mark>accounts-password</mark>, along with the pre-built user interface for logging in, <mark>accounts-ui</mark>.</p>
+							<code>$ meteor add accounts-ui accounts-password</code>
+							<p>I can add the UI to my page simply by adding this to the html:</p>
+							<code>{{loginButtons}}</code>
+							<p>Now if I open the page in my browser, there is a log in button and an easy interface to create an account.</p>
+							<p>Once I've got an account for myself, I want to prevent anyone else from creating one, so I disable account creation on the server:</p>
+							<code>
+								Accounts.config({
+									<code>forbidClientAccountCreation: true,</code>
+								})
+							</code>
+							<h4>Deploying</h4>
+							<p>Now it's time to get it online. Meteor helpfully supply free servers to host your apps on. All you need to do is deploy it from the command line:</p>
+							<code>meteor deploy jenberry.meteor.com</code>
+							<p>Now anyone can see our app  by going to <a href="http://jenberry.meteor.com" target="_blank">jenberry.meteor.com</a></p>
+							<h4>Copying the database to the server</h4>
+							<p>When you deploy your app in this way, a fresh database is created. However it's relatively easy to copy your existing database across with mongodump and mongorestore.</p>
+							<p>First we find the address of the database. If you open the mongo shell you will see something like this</p>
+							<code>$ meteor mongo</code>
+							<br>
+							<code>MongoDB shell version: 2.4.9</code>
+							<code>connecting to: 127.0.0.1:3001/meteor</code>
+							<p>So we see our host is "127.0.0.1", port is "3001" and database is "meteor"</p>
+							<p>Make sure you have mongodb installed on your system</p>
+							<code>$ sudo apt-get install mongodb</code>
+							<p>And we can make a dump of your database</p>
+							<code>$ mongodump -h 127.0.0.1 --port 3001 -d meteor</code>
+							<p>This will store a dump of the database in dump/meteor.</p>
+							<p>To restore the database to the mongo server, we need to find the location of the database on the server. We do this with the following command:</p>
+							<code>$ meteor mongo jenberry.meteor.com --url</code>
+							<p>And you will get something back of the form:</p>
+							<code>mongodb://[user]:[password]@[host]:[port]/[database]</code>
+							<p>We can then plug this information into mongorestore, but be quick, the credentials are only valid for a short time.</p>
+							<code>mongorestore -u [user] -p [password] -h [host]:[port] -d [database] dump/meteor/</code>
+							<p>And there we are, our app is now online and secure</p>
+						</div>
+					</article>
+					<article class="blogarticle">
+						<header class="blogsummary">
 							<time pubdate datetime="2014-02-18" class="blogdate">
 								<span class="day">26</span><span class="month">Mar</span>
 							</time>
